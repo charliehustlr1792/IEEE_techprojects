@@ -1,2 +1,2 @@
 # IEEE_techprojects
-Conatins the backend authentication project with the bonus project
+Conatins the backend authentication project
