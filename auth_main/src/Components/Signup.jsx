@@ -12,7 +12,7 @@ const Signup = () => {
   const navigate=useNavigate()
   const handleSubmit =(e)=>{
     e.preventDefault()
-    Axios.post('https://ieee-techprojects-frontend.vercel.app/auth/signup',{
+    Axios.post('http://localhost:3000/auth/signup',{
         username,email,password
     }).then(response =>{
         if(response.data.status){

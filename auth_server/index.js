@@ -9,19 +9,13 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://ieee-techprojects-frontend.vercel.app"],
-    methods:["POST","GET"],
+    origin: ["http://localhost:5173"],
     credentials: true,
   })
 );
-app.use(function(req,res,next){
-  res.header("Acess-Control-Allow-Origin","*");
-  res.header("Acess-Control-Allow-Origin","Origin,X-Requested-With,Content-Type,Accept");
-  next();
-})
 app.use(cookieParser());
 app.use("/auth", UserRouter);
-mongoose.connect("mongodb+srv://nilcreator1792:0mpvzj9UVEoWFwQT@cluster0.jyzumwb.mongodb.net/");
+mongoose.connect("mongodb://127.0.0.1:27017/authentication");
 
 app.listen(process.env.PORT, () => {
   console.log("Server Running");
