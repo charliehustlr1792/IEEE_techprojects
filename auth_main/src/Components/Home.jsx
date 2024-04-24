@@ -5,7 +5,19 @@ import '../App.css'
 const Home = () => {
     const navigate=useNavigate()
     axios.defaults.withCredentials=true
-  return (
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      Axios.post("https://ieee-techprojects-rrrn.vercel.app")
+        .then((response) => {
+          if (response.data.status) {
+            navigate("/");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    return (
     <div class='display'>
       <h2>HOME</h2>
       <button><p>
@@ -14,6 +26,7 @@ const Home = () => {
       
         
     </div>
+    
   )
 }
 
