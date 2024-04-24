@@ -13,6 +13,11 @@ app.use(
     credentials: true,
   })
 );
+app.use(function(req,res,next){
+  res.header("Acess-Control-Allow-Origin","*");
+  res.header("Acess-Control-Allow-Origin","Origin,X-Requested-With,Content-Type,Accept");
+  next();
+})
 app.use(cookieParser());
 app.use("/auth", UserRouter);
 mongoose.connect("mongodb://127.0.0.1:27017/authentication");
