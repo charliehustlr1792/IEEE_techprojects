@@ -13,7 +13,7 @@ const Login = () => {
   Axios.defaults.withCredentials = true;
   const handleSubmit = (e) => {
     e.preventDefault();
-    Axios.post("https://ieee-techprojects.vercel.app/auth/login", {
+    Axios.post("https://ieee-techprojects-rrrn.vercel.app/auth/login", {
       email,
       password,
     })
