@@ -11,7 +11,7 @@ const ResetPassword = () => {
     const navigate=useNavigate()
     const handleSubmit =(e)=>{
       e.preventDefault()
-      Axios.post('https://ieee-techprojects-rrrn.vercel.app/auth/reset-password/'+token,{
+      Axios.post('https://ieee-techprojects-frontend.vercel.app/auth/reset-password/'+token,{
           password
       }).then(response =>{
           if(response.data.status){
