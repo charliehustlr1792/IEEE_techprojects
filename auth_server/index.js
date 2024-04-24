@@ -21,7 +21,7 @@ app.use(function(req,res,next){
 })
 app.use(cookieParser());
 app.use("/auth", UserRouter);
-mongoose.connect("mongodb://127.0.0.1:27017/authentication");
+mongoose.connect("mongodb+srv://nilcreator1792:0mpvzj9UVEoWFwQT@cluster0.jyzumwb.mongodb.net/");
 
 app.listen(process.env.PORT, () => {
   console.log("Server Running");
