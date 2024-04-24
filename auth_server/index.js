@@ -9,7 +9,8 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://ieee-techprojects.vercel.app"],
+    origin: ["https://ieee-techprojects.vercel.app/"],
+    methods:["POST","GET"],
     credentials: true,
   })
 );
