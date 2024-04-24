@@ -7,7 +7,7 @@ const Dashboard = () => {
     const navigate=useNavigate()
     axios.defaults.withCredentials=true
     const handleLogout=() =>{
-        axios.get("http://localhost:3000/auth/logout").then(res=>{
+        axios.get("https://ieee-techprojects.vercel.app/auth/logout").then(res=>{
             if(res.data.status){
                Navigate('/login')
             }

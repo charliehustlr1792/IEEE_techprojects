@@ -10,7 +10,7 @@ const ForgotPassword = () => {
     const navigate=useNavigate()
     const handleSubmit =(e)=>{
       e.preventDefault()
-      Axios.post('http://localhost:3000/auth/forgot-password',{
+      Axios.post('https://ieee-techprojects.vercel.app/auth/forgot-password',{
           email
       }).then(response =>{
           if(response.data.status){
